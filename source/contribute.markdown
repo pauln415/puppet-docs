@@ -53,7 +53,7 @@ to your own remote host or provide git patches later):
 
 Read the
  [README](http://github.com/puppetlabs/puppet-docs/blob/master/README.markdown)
-and [README_WRITING](http://github.com/puppetlabs/puppet-docs/blob/master/README_WRITING.markdown) in the source.
+and [README_WRITING](http://github.com/puppetlabs/puppet-docs/blob/master/README_WRITING.markdown) in the source. Also, to help in keeping the language in the documentation consistent, please read the [documentation style and usage guide](./guides/style_and_usage.html).
 
 ### Make your changes
 
