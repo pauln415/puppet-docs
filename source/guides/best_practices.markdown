@@ -27,10 +27,10 @@ Node names should match the hostnames of the nodes.
 
 When naming classes, a class that disables ssh should be inherited from the ssh class and be named "ssh::disabled"
 
-Style
+Coding Style
 -----
 
-For recommendations on syntax and formatting, follow the [Style Guide](./style.html)
+For recommendations on syntax and formatting, follow the [Manifest Style Guide](./manifest_style.html)
 
 Classes Vs Defined Types
 ------------------------
