@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Style Guide
+title: Manifest Style Guide
 ---
 
-Style Guide
+Manifest Style Guide
 ===========
 
 * * *
