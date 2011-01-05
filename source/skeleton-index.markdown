@@ -15,7 +15,7 @@ Learning Puppet
 New users start here.
 
 * Introduction 
-    * [What Puppet is](guides/introduction.html) **Needs revision, needs new diagrams.**
+    * [What Puppet is](guides/introduction.html) **Needs revision, needs new diagrams.** *add a reference to <http://groups.google.com/group/puppet-users/browse_thread/thread/fa57d718b3de50e5/e57c7b8a8f591d3e?lnk=gst&q=graph+model#e57c7b8a8f591d3e> this info. 
     * [Installing and setting up Puppet](guides/installation.html)
         * [Supported platforms](guides/platforms.html) **Need to qualify statement of Windows support, since it's still way shaky.**
         * [Setting up](guides/configuring.html) **needs to be shrunk and revised; some of these instructions are irrelevant until the user has a better grasp of client/server puppet.**
