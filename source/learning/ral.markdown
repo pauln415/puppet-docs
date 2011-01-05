@@ -13,18 +13,14 @@ Resources are the building blocks of Puppet, and the division of resources into 
 Atoms and Abstraction
 -----
 
-To begin with, a resource is simply a thing. 
+Think of a system's configuration as being composed of a number of individual atoms; call them "**resources.**" These discrete pieces can vary in size, complexity, and lifetime: a user account can be a resource, as can a specific file, a software package, a running service, or a scheduled cron job. Even a single invocation of a shell command can be a resource.
 
-This will sound rather abstract, which is ultimately the point. A user account can be a resource, and so can a specific file, a software package, a running service, or a scheduled cron job. Even a single invocation of a shell command can be a resource.
+Each of these individual things is very similar to a class of related things: any given file will have a path and an owner, and any given user will have a name, an ID, and a group. Which is to say: _similar resources can be grouped into types._ Furthermore, the most important attributes of a resource type are usually conceptually identical across operating systems, regardless of how the implementations differ. Which is to say: _the description of a resource can be abstracted away from its implementation._ 
 
-Each of these individual things is very similar to a class of related things: any given file will have a path and an owner; any given user will have a name and an ID and a group. Which is to say: _similar resources can be grouped into types._
-
-regardless of your OS or filesystem,
-
-What ties these disparate things together is that each of them belongs to an abstracted class of similar things: A user account on Mac OS X is implemented differently than a user account on Solaris or Ubuntu or Fedora Core, but they all have common properties, such as a user name, a user ID, one or more groups, a password, etcetera. Regardless of the filesystem a given OS uses, files on it will still have paths, owners, and permission modes. Puppet 
+These two insights form Puppet's resource abstraction layer (RAL). The RAL splits resources into **types** (high-level models) and **providers** (platform-specific implementations), and lets you declare resources -- instances of a resource type -- in a way that can be applied to any system. 
 
 
 
 
 
-Every resource belongs to a type, 
+
