@@ -15,8 +15,10 @@ Learning Puppet
 New users start here.
 
 * Introduction 
-    * What Puppet is
-    * Installing and setting up Puppet
+    * [What Puppet is](guides/introduction.html) **Needs revision, needs new diagrams.**
+    * [Installing and setting up Puppet](guides/installation.html)
+        * [Supported platforms](guides/platforms.html) **Need to qualify statement of Windows support, since it's still way shaky.**
+        * [Setting up](guides/configuring.html) **needs to be shrunk and revised; some of these instructions are irrelevant until the user has a better grasp of client/server puppet.**
 * Resources and the RAL
     * RAL concepts
     * ralsh exercises
@@ -33,7 +35,7 @@ New users start here.
         * Not at all like an OO programming class; more like a role. 
         * Nodes are composed of classes.
         * `include some_class` == `class { some_class: }`; this gets important later, so get used to telling the difference between outside-the-curlies and inside-the-curlies now. 
-    * Code style
+    * [Code style](guides/style.html) *Although this doc needs to be prominent in the refs section, too. Duplicate this one instead of replacing it.* 
 * Interlude: beginning exercises
     * Implement a package/file/service pattern and apply it. 
     * (More later)
@@ -59,38 +61,38 @@ New users start here.
 * The shape of a real puppet site
     * site.pp (`puppet master --configprint manifest`)
         * mention external node classifiers, without going into too much detail.
-    * Modules
+    * [Modules](guides/modules.html) **Needs a rewrite.**
         * Thou shalt use modules for damn well everything.
         * Classes (more complete version)
-        * Module structure 
-        * Module autoloading 
+        * [Module structure](guides/modules.html) **Needs a rewrite.**
+        * [Module autoloading](guides/plugins_in_modules.html)  *sort of.*
             * foo           -> modules/foo/manifests/init.pp
             * foo::bar      -> modules/foo/manifests/bar.pp
             * foo::bar::fog -> modules/foo/manifests/bar/fog.pp
         * moduletool
         * forge
         * Tying it together: composing nodes using classes from modules
-    * File serving (via modules)
-    * Templates (via modules)
+    * [File serving](guides/file_serving.html) (via modules) *Could use a rewrite; this was where I first started grappling with module autoloading, and it's not as important as some of the other parts of the system.*
+    * [Templates](guides/templating.html) (via modules) *Looking pretty good; will want revision once we have the surrounding text written.*
 * Interlude: intermediate exercises
     * Make a hello world module
     * Make multiple modules and apply them to different nodes.
     * Download, use, and extend a public module
     * (More later)
 * Completing the basic skill set
-    * Parameterized classes
-    * Defined resource types
     * tags
-    * Custom facts
-    * Custom functions
-    * Virtual resources
+    * Parameterized classes 
+    * Defined resource types **The current best info on these is in guides/language tutorial.**
+    * [Custom facts](guides/custom_facts.html) *status: ???*
+    * [Custom functions](guides/custom_functions.html) *status: ???*
+    * [Virtual resources](guides/virtual_resources.html) *Doing okay, could use better integration with the surroundings. Should this material be mentioned earlier?*
         * Mention the existence of exported resources
 * Controlling the big picture
-    * Reports
-    * Environments
-    * Storeconfigs
-    * exported resources
-    * External node classifiers
+    * [Reports](guides/reporting.html) *status unknown. To me, at least.*
+    * [Environments](guides/environment.html) *May have outdated info at the bottom.*
+    * Storeconfigs **Missing completely.**
+    * [exported resources](guides/exported_resources.html) *unrevised*
+    * [External node classifiers](guides/external_nodes.html) *unrevised*
     * puppet dashboard
         * installing
         * as a report tool
@@ -121,3 +123,29 @@ Reference Library
 
 The dog-eared notebook of the experienced user.
 
+
+
+Orphaned Docs
+========
+
+Existing docs files that don't have a new home yet. 
+
+* `best_practices.markdown`
+* `complete_resource_example.markdown`
+* `custom_types.markdown`
+* `development_lifecycle.markdown`
+* `faq.markdown`
+* `from_source.markdown`
+* `installing_dashboard.markdown`
+* `language_tutorial.markdown`
+* `mongrel.markdown`
+* `passenger.markdown`
+* `provider_development.markdown`
+* `rest_api.markdown`
+* `scaling.markdown`
+* `security.markdown`
+* `techniques.markdown`
+* `tools.markdown`
+* `troubleshooting.markdown`
+* `types`
+* `using_dashboard.markdown`
